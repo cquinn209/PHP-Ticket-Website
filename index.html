@@ -1,0 +1,79 @@
+<html>
+   
+<head>
+
+
+
+
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+<title>Login</title>
+
+
+
+
+</head>
+
+<body>
+<div>
+
+    <div class = "jumbotron text-center">
+    <h1>Login</h1>
+   </div>
+   
+<form action="authenticate.php" method="post">
+
+
+
+
+
+<!-- Doesn't accept any potential malicious characters using pattern -->
+
+        <div class="col-sm-4">
+
+        <label for="username">Username</label>
+        <input type="text" pattern="[a-zA-Z0-9!@#$%^*_|]{0,100}" class="form-control" name="username" placeholder="please enter username" id="username" required>
+
+        </div>
+
+
+
+
+
+
+    <div class="col-sm-4">
+
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="password" placeholder="please enter password" id="password" required>
+
+     <br>
+
+     <input type="submit" class="btn btn-primary"  value="login">
+
+    </div>
+
+
+
+    <br>
+
+
+    <!-- Captcha -->
+    <div class="g-recaptcha" data-sitekey="6LdRFekZAAAAAAk1Qa0teDF09PcS3CVjh7IlwRz8"></div>
+
+
+
+</form>
+
+</div>
+
+
+</body>
+
+
+
+
+
+</html>
